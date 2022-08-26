@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.125" />
+        <entry key="app/src/main/res/drawable/bg_button_disable.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/bg_button_enable.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/ic_auth.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_a_photo_24.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/ic_baseline_language_24.xml" value="0.1095" />
+        <entry key="app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/ic_capture.xml" value="0.1715" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/ic_form.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_full_name.xml" value="0.2045" />
+        <entry key="app/src/main/res/drawable/ic_password.xml" value="0.1095" />
+        <entry key="app/src/main/res/drawable/ic_switch_camera.xml" value="0.1715" />
+        <entry key="app/src/main/res/layout/activity_camera.xml" value="0.182518115942029" />
+        <entry key="app/src/main/res/layout/activity_change_language.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detail_story.xml" value="0.2843963623046875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.3098419189453125" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.182518115942029" />
+        <entry key="app/src/main/res/layout/activity_upload_story.xml" value="0.182518115942029" />
+        <entry key="app/src/main/res/layout/custom_button.xml" value="0.3484970092773438" />
+        <entry key="app/src/main/res/layout/item_language.xml" value="0.3566375732421875" />
+        <entry key="app/src/main/res/layout/item_main.xml" value="0.24406332453825857" />
+        <entry key="app/src/main/res/layout/stories_widget.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/widget_item.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

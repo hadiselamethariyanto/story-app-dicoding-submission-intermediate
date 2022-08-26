@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Inloggen</string>
+    <string name="sign_up">aanmelden</string>
+    <string name="password">Wachtwoord</string>
+    <string name="full_name">voor-en achternaam</string>
+    <string name="password_error">Wachtwoord moet langer zijn dan 6 tekens</string>
+    <string name="email_error">verkeerd e-mailformaat</string>
+    <string name="logout">uitloggen</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">galerij</string>
+    <string name="description">Omschrijving</string>
+    <string name="upload">uploaden</string>
+    <string name="empty">leeg</string>
+    <string name="title_activity_detail_story">Detail Verhaal</string>
+    <string name="title_activity_upload_story">Verhaal Uploaden</string>
+    <string name="title_activity_change_language">Taal Veranderen</string>
+    <string name="permission_message">Kan geen toestemming geven</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail_story.DetailStoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:transitionName="photo"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:transitionName="user"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_user_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgPhoto" />
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:transitionName="full_name"
+            app:layout_constraintStart_toEndOf="@id/imgUser"
+            app:layout_constraintTop_toBottomOf="@id/imgPhoto"
+            tools:text="User 1" />
+
+        <TextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/grey_500"
+            android:textSize="12sp"
+            android:transitionName="created_at"
+            app:layout_constraintStart_toEndOf="@id/imgUser"
+            app:layout_constraintTop_toBottomOf="@id/tvFullName"
+            tools:text="1 minutes ago" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif"
+            android:textSize="12sp"
+            android:transitionName="description"
+            app:layout_constraintTop_toBottomOf="@id/imgUser"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

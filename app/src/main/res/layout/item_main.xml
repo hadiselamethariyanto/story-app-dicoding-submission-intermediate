@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_user_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/imgUser"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User 1" />
+
+    <TextView
+        android:id="@+id/tvCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/grey_500"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/imgUser"
+        app:layout_constraintTop_toBottomOf="@id/tvFullName"
+        tools:text="1 minutes ago" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/imgUser"
+        tools:text="@tools:sample/lorem/random" />
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

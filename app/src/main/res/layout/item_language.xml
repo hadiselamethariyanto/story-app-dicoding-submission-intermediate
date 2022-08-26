@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_netherland"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Netherlands" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
