@@ -6,7 +6,6 @@ import com.example.submissionintermediate.data.repository.DicodingRepository
 import com.example.submissionintermediate.model.User
 import com.example.submissionintermediate.utils.CoroutineTestRule
 import com.example.submissionintermediate.utils.getOrAwaitValue
-import com.nhaarman.mockitokotlin2.verify
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
@@ -14,6 +13,7 @@ import org.junit.*
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito
+import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
 
 @OptIn(ExperimentalCoroutinesApi::class)

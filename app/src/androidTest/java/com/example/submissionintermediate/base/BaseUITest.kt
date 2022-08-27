@@ -11,14 +11,11 @@ import org.koin.test.KoinTest
 abstract class BaseUITest : KoinTest {
     lateinit var mockWebServer: MockWebServer
 
-    private var mShouldStart = false
-
-
     fun getMockWebServerUrl() = mockWebServer.url("/").toString()
 
     @Before
     fun setUp() {
-        startMockServer(true)
+        startMockServer()
         IdlingRegistry.getInstance().register(EspressoIdlingResource.countingIdlingResource)
     }
 
@@ -34,18 +31,13 @@ abstract class BaseUITest : KoinTest {
         mockWebServer.enqueue(mockResponse)
     }
 
-    private fun startMockServer(shouldStart: Boolean) {
-        if (shouldStart) {
-            mShouldStart = shouldStart
-            mockWebServer = MockWebServer()
-            mockWebServer.start()
-        }
+    private fun startMockServer() {
+        mockWebServer = MockWebServer()
+        mockWebServer.start()
     }
 
     private fun stopMockServer() {
-        if (mShouldStart) {
-            mockWebServer.shutdown()
-        }
+        mockWebServer.shutdown()
     }
 
 }

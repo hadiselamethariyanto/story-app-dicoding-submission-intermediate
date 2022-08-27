@@ -3,7 +3,6 @@ package com.example.submissionintermediate.ui.language
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.submissionintermediate.data.preferences.UserPreference
 import com.example.submissionintermediate.utils.CoroutineTestRule
-import com.nhaarman.mockitokotlin2.verify
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
@@ -11,6 +10,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
+import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
 
 @OptIn(ExperimentalCoroutinesApi::class)

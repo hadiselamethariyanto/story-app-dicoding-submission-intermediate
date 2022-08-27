@@ -6,7 +6,6 @@ import com.example.submissionintermediate.data.remote.ApiServiceJson
 import com.example.submissionintermediate.data.remote.response.LoginResponse
 import com.example.submissionintermediate.data.repository.DicodingRepository
 import com.example.submissionintermediate.utils.getOrAwaitValue
-import com.nhaarman.mockitokotlin2.verify
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -20,6 +19,7 @@ import org.junit.runner.RunWith
 import org.mockito.ArgumentMatchers.anyString
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
+import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
 
 @OptIn(ExperimentalCoroutinesApi::class)
