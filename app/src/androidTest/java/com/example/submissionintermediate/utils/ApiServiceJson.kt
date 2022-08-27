@@ -26,6 +26,13 @@ class ApiServiceJson {
                 "}"
     }
 
+    fun getAllStoriesErrorJson():String{
+        return "{\n" +
+                "    \"error\": true,\n" +
+                "    \"message\": \"Missing authentication\"\n" +
+                "}"
+    }
+
     fun getAllStoriesResponse(): StoriesResponse {
         val json = getAllStoriesJson()
         return Gson().fromJson(json, StoriesResponse::class.java)
