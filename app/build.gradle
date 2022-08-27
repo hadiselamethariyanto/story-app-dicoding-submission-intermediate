@@ -115,7 +115,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
-//    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
 
     //special testing
     testImplementation "androidx.arch.core:core-testing:2.1.0" // InstantTaskExecutorRule
@@ -124,6 +124,7 @@ dependencies {
     //mockito
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
     testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    androidTestImplementation "org.mockito:mockito-android:$mockitoVersion"
 
     //special instrumentation testing
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0" // InstantTaskExecutorRule
@@ -138,6 +139,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'androidx.test:rules:1.4.0'
     androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.3'
+    androidTestImplementation 'com.github.tmurakami:dexopener:2.0.5'
 
     testImplementation "androidx.arch.core:core-testing:2.1.0" // InstantTaskExecutorRule
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1" //TestDispatcher

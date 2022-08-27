@@ -14,7 +14,79 @@ class ApiServiceJson {
                 "    \"message\": \"Stories fetched successfully\",\n" +
                 "    \"listStory\": [\n" +
                 "        {\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFa\",\n" +
+                "            \"name\": \"Dimas-1\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFb\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFc\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFd\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFe\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFf\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
                 "            \"id\": \"story-FvU4u0Vp2S3PMsFg\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFh\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFi\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFj\",\n" +
                 "            \"name\": \"Dimas\",\n" +
                 "            \"description\": \"Lorem Ipsum\",\n" +
                 "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
@@ -26,6 +98,106 @@ class ApiServiceJson {
                 "}"
     }
 
+    fun getSecondPageStoriesJson():String{
+        return "{\n" +
+                "    \"error\": false,\n" +
+                "    \"message\": \"Stories fetched successfully\",\n" +
+                "    \"listStory\": [\n" +
+                "        {\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFk\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFl\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFm\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFn\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFo\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFp\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFq\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFr\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFs\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        },{\n" +
+                "            \"id\": \"story-FvU4u0Vp2S3PMsFt\",\n" +
+                "            \"name\": \"Dimas\",\n" +
+                "            \"description\": \"Lorem Ipsum\",\n" +
+                "            \"photoUrl\": \"https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png\",\n" +
+                "            \"createdAt\": \"2022-01-08T06:34:18.598Z\",\n" +
+                "            \"lat\": -10.212,\n" +
+                "            \"lon\": -16.002\n" +
+                "        }\n" +
+                "    ]\n" +
+                "}"
+    }
+
+    fun getEmptyStoriesJson():String{
+        return "{\n" +
+                "    \"error\": false,\n" +
+                "    \"message\": \"Stories fetched successfully\",\n" +
+                "    \"listStory\": [\n" +
+                "        \n" +
+                "    ]\n" +
+                "}"
+    }
+
     fun getAllStoriesErrorJson():String{
         return "{\n" +
                 "    \"error\": true,\n" +
@@ -33,10 +205,6 @@ class ApiServiceJson {
                 "}"
     }
 
-    fun getAllStoriesResponse(): StoriesResponse {
-        val json = getAllStoriesJson()
-        return Gson().fromJson(json, StoriesResponse::class.java)
-    }
 
     fun registerJson(): String {
         return "{\n" +

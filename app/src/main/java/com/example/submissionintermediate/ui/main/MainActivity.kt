@@ -80,6 +80,17 @@ class MainActivity : BaseActivity() {
 
             setLoading(loadingState)
 
+            val errorFirst = loadState.refresh is LoadState.Error
+            if (errorFirst) {
+                val message = loadState.refresh as LoadState.Error
+                binding.tvErrorMessage.visibility = View.VISIBLE
+                binding.tvErrorMessage.text = message.error.message.toString()
+                binding.rvMain.visibility = View.GONE
+            } else {
+                binding.rvMain.visibility = View.VISIBLE
+                binding.tvErrorMessage.visibility = View.GONE
+            }
+
             if (errorState != null) {
                 Toast.makeText(this, errorState.error.message, Toast.LENGTH_LONG).show()
             }
