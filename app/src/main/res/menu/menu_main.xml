@@ -3,10 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/maps"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="@string/title_activity_maps"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/language"
         android:icon="@drawable/ic_baseline_language_24"
-        android:title="bahasa"
-        app:showAsAction="ifRoom"/>
+        android:title="@string/title_activity_change_language"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/logout"

@@ -18,5 +18,6 @@
     <string name="title_activity_upload_story">Unggah Cerita</string>
     <string name="title_activity_change_language">Ubah Bahasa</string>
     <string name="permission_message">Tidak mendapatkan izin</string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps">Peta</string>
+    <string name="maps_empty_stories_message">Tidak ada cerita yang bisa ditampilkan</string>
 </resources>

@@ -20,9 +20,11 @@ interface IDicodingRepository {
 
     fun getAllStories(): Flow<Resource<StoriesResponse>>
 
-    fun getPagingStories():Flow<PagingData<StoryEntity>>
+    fun getAllStoriesFromLocal(): Flow<List<StoryEntity>>
 
-    suspend fun getStories():Flow<ApiResponse<StoriesResponse>>
+    fun getPagingStories(): Flow<PagingData<StoryEntity>>
+
+    suspend fun getStories(): Flow<ApiResponse<StoriesResponse>>
 
     fun getUser(): Flow<User>
 

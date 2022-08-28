@@ -16,4 +16,6 @@
     <string name="title_activity_upload_story">Upload Story</string>
     <string name="title_activity_change_language">Change Language</string>
     <string name="permission_message">Can\'t grant permission</string>
+    <string name="title_activity_maps">Maps</string>
+    <string name="maps_empty_stories_message">No stories to show</string>
 </resources>

@@ -16,4 +16,6 @@
     <string name="title_activity_upload_story">Verhaal Uploaden</string>
     <string name="title_activity_change_language">Taal Veranderen</string>
     <string name="permission_message">Kan geen toestemming geven</string>
+    <string name="title_activity_maps">kaarten</string>
+    <string name="maps_empty_stories_message">Geen verhalen om te laten zien</string>
 </resources>

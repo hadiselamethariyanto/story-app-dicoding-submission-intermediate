@@ -17,6 +17,7 @@ import com.example.submissionintermediate.databinding.ActivityMainBinding
 import com.example.submissionintermediate.ui.base.BaseActivity
 import com.example.submissionintermediate.ui.language.ChangeLanguageActivity
 import com.example.submissionintermediate.ui.login.LoginActivity
+import com.example.submissionintermediate.ui.maps.MapsActivity
 import com.example.submissionintermediate.ui.upload_story.UploadStoryActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -126,6 +127,10 @@ class MainActivity : BaseActivity() {
             }
             R.id.language -> {
                 startActivity(Intent(this, ChangeLanguageActivity::class.java))
+                true
+            }
+            R.id.maps -> {
+                startActivity(Intent(this, MapsActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

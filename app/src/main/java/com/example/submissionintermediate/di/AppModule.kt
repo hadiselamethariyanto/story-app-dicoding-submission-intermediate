@@ -8,6 +8,7 @@ import com.example.submissionintermediate.data.preferences.UserPreference
 import com.example.submissionintermediate.ui.language.ChangeLanguageViewModel
 import com.example.submissionintermediate.ui.login.LoginViewModel
 import com.example.submissionintermediate.ui.main.MainViewModel
+import com.example.submissionintermediate.ui.maps.MapsViewModel
 import com.example.submissionintermediate.ui.register.RegisterViewModel
 import com.example.submissionintermediate.ui.splash.SplashViewModel
 import com.example.submissionintermediate.ui.upload_story.UploadStoryViewModel
@@ -22,6 +23,7 @@ val viewModelModule = module {
     viewModel { LoginViewModel(get()) }
     viewModel { UploadStoryViewModel(get()) }
     viewModel { ChangeLanguageViewModel(get()) }
+    viewModel { MapsViewModel(get()) }
 }
 
 

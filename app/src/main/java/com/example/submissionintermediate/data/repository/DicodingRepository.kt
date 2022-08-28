@@ -91,6 +91,10 @@ class DicodingRepository(
         }.asFlow()
     }
 
+    override fun getAllStoriesFromLocal(): Flow<List<StoryEntity>> {
+        return localDataSource.getAllStories()
+    }
+
     @OptIn(ExperimentalPagingApi::class)
     override fun getPagingStories(): Flow<PagingData<StoryEntity>> {
         return Pager(
