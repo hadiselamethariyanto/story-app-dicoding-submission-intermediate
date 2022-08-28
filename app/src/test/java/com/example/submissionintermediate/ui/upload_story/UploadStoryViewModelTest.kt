@@ -74,15 +74,19 @@ class UploadStoryViewModelTest {
     @Test
     fun `add new story success`() = runTest {
         viewModel.dataChanged(file, "test")
+        val latitude = -6.8957643F
+        val longitude = 107.6338462F
+
 
         val addNewStoryResponse = ApiServiceJson().addStoryResponse()
         val result = Resource.Success(addNewStoryResponse)
 
-        Mockito.`when`(dicodingRepository.addNewStory(file, "test")).thenReturn(flowOf(result))
+        Mockito.`when`(dicodingRepository.addNewStory(file, "test", latitude, longitude))
+            .thenReturn(flowOf(result))
 
-        val actual = viewModel.addNewStory("test")?.getOrAwaitValue()
+        val actual = viewModel.addNewStory("test", latitude, longitude)?.getOrAwaitValue()
 
-        verify(dicodingRepository).addNewStory(file, "test")
+        verify(dicodingRepository).addNewStory(file, "test", latitude, longitude)
 
         Assert.assertNotNull(actual)
         Assert.assertEquals(result, actual)
@@ -91,15 +95,19 @@ class UploadStoryViewModelTest {
     @Test
     fun `add new story failed`() = runTest {
         viewModel.dataChanged(file, "")
+        val latitude = -6.8957643F
+        val longitude = 107.6338462F
+
 
         val message = "token expired"
         val result: Resource<FileUploadResponse> = Resource.Error(message, null)
 
-        Mockito.`when`(dicodingRepository.addNewStory(file, "test")).thenReturn(flowOf(result))
+        Mockito.`when`(dicodingRepository.addNewStory(file, "test", latitude, longitude))
+            .thenReturn(flowOf(result))
 
-        val actual = viewModel.addNewStory("test")?.getOrAwaitValue()
+        val actual = viewModel.addNewStory("test", latitude, longitude)?.getOrAwaitValue()
 
-        verify(dicodingRepository).addNewStory(file, "test")
+        verify(dicodingRepository).addNewStory(file, "test", latitude, longitude)
 
         Assert.assertNotNull(actual)
         Assert.assertEquals(result, actual)

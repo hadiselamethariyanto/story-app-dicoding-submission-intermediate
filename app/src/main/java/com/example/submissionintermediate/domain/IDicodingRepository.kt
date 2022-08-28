@@ -28,5 +28,10 @@ interface IDicodingRepository {
 
     fun getUser(): Flow<User>
 
-    fun addNewStory(file: File, description: String): Flow<Resource<FileUploadResponse>>
+    fun addNewStory(
+        file: File,
+        description: String,
+        lat: Float?,
+        lon: Float?
+    ): Flow<Resource<FileUploadResponse>>
 }

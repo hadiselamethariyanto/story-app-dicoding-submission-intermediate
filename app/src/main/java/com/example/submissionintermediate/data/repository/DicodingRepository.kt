@@ -115,7 +115,12 @@ class DicodingRepository(
         return userPreference.getUser()
     }
 
-    override fun addNewStory(file: File, description: String): Flow<Resource<FileUploadResponse>> {
+    override fun addNewStory(
+        file: File,
+        description: String,
+        lat: Float?,
+        lon: Float?
+    ): Flow<Resource<FileUploadResponse>> {
         return object : NetworkBoundResourceInternet<FileUploadResponse, FileUploadResponse>() {
             override fun loadFromNetwork(data: FileUploadResponse): Flow<FileUploadResponse> {
                 return flowOf(data)
@@ -123,7 +128,7 @@ class DicodingRepository(
 
             override suspend fun createCall(): Flow<ApiResponse<FileUploadResponse>> {
                 val token = "Bearer " + userPreference.getToken().first()
-                return remoteDataSource.addNewStory(file, description, token)
+                return remoteDataSource.addNewStory(file, description, lat, lon, token)
             }
 
             override suspend fun saveCallResult(data: FileUploadResponse) {

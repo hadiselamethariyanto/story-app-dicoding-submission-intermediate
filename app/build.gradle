@@ -73,11 +73,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
 
+    //play service
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+
     //room
     implementation 'androidx.room:room-ktx:2.5.0-alpha02'
     implementation 'androidx.room:room-paging:2.5.0-alpha02'
     implementation "androidx.room:room-runtime:2.5.0-alpha02"
-    implementation 'com.google.android.gms:play-services-maps:18.1.0'
     kapt "androidx.room:room-compiler:2.5.0-alpha02"
 
     //paging3

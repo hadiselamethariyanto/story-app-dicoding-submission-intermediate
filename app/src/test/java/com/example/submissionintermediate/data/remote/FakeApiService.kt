@@ -30,8 +30,11 @@ class FakeApiService : ApiService {
     override suspend fun addNewStory(
         file: MultipartBody.Part,
         description: RequestBody,
+        lat: RequestBody?,
+        lon: RequestBody?,
         token: String
     ): FileUploadResponse {
         TODO("Not yet implemented")
     }
+
 }

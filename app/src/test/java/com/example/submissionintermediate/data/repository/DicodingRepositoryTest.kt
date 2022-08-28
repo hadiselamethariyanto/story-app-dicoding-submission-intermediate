@@ -175,6 +175,9 @@ class DicodingRepositoryTest {
         val token = "123"
         val file = mock(File::class.java)
         val description = "deskripsi"
+        val latitude = -6.8957643F
+        val longitude = 107.6338462F
+
 
         val addStoryResponse = ApiServiceJson().addStoryResponse()
 
@@ -184,14 +187,17 @@ class DicodingRepositoryTest {
             remoteDataSource.addNewStory(
                 file,
                 description,
+                latitude,
+                longitude,
                 "Bearer $token"
             )
         ).thenReturn(flowOf(ApiResponse.Success(addStoryResponse)))
 
-        val actual = repository.addNewStory(file, description).toList()
+        val actual = repository.addNewStory(file, description, latitude, longitude).toList()
         val inOrder = inOrder(userPreference, remoteDataSource)
         inOrder.verify(userPreference).getToken()
-        inOrder.verify(remoteDataSource).addNewStory(file, description, "Bearer $token")
+        inOrder.verify(remoteDataSource)
+            .addNewStory(file, description, latitude, longitude, "Bearer $token")
         Assert.assertNotNull(actual)
         Assert.assertEquals(addStoryResponse.message, actual[1].data?.message)
         Assert.assertEquals(addStoryResponse.error, actual[1].data?.error)
@@ -202,6 +208,8 @@ class DicodingRepositoryTest {
         val token = "123"
         val file = mock(File::class.java)
         val description = "deskripsi"
+        val latitude = -6.8957643F
+        val longitude = 107.6338462F
 
         val message = "file more than 5 mb"
 
@@ -211,14 +219,17 @@ class DicodingRepositoryTest {
             remoteDataSource.addNewStory(
                 file,
                 description,
+                latitude,
+                longitude,
                 "Bearer $token"
             )
         ).thenReturn(flowOf(ApiResponse.Error(message)))
 
-        val actual = repository.addNewStory(file, description).toList()
+        val actual = repository.addNewStory(file, description, latitude, longitude).toList()
         val inOrder = inOrder(userPreference, remoteDataSource)
         inOrder.verify(userPreference).getToken()
-        inOrder.verify(remoteDataSource).addNewStory(file, description, "Bearer $token")
+        inOrder.verify(remoteDataSource)
+            .addNewStory(file, description, latitude, longitude, "Bearer $token")
         Assert.assertNotNull(actual)
         Assert.assertEquals(message, actual[1].message)
     }

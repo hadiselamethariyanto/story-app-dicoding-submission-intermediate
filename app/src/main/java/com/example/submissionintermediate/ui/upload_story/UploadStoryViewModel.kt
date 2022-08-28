@@ -25,7 +25,7 @@ class UploadStoryViewModel(private val dicodingRepository: IDicodingRepository) 
         _formState.value = _file.value != null && description.isNotEmpty()
     }
 
-    fun addNewStory(description: String) =
-        _file.value?.let { dicodingRepository.addNewStory(it, description).asLiveData() }
+    fun addNewStory(description: String, lat: Float?, lon: Float?) =
+        _file.value?.let { dicodingRepository.addNewStory(it, description, lat, lon).asLiveData() }
 
 }
