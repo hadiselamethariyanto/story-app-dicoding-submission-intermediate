@@ -22,7 +22,7 @@ import com.example.submissionintermediate.R
 import com.example.submissionintermediate.data.local.entities.StoryEntity
 import java.util.*
 
-class MainAdapter : PagingDataAdapter<StoryEntity,MainAdapter.ViewHolder>(DataDifferentiator) {
+class MainAdapter : PagingDataAdapter<StoryEntity, MainAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     class ViewHolder(private val binding: ItemMainBinding) : RecyclerView.ViewHolder(binding.root) {
         fun binding(storiesItem: StoryEntity) {
@@ -53,7 +53,7 @@ class MainAdapter : PagingDataAdapter<StoryEntity,MainAdapter.ViewHolder>(DataDi
                     )
                 val intent = Intent(itemView.context, DetailStoryActivity::class.java)
                 intent.putExtras(bundle)
-                itemView.context.startActivity(intent,optionsCompat.toBundle())
+                itemView.context.startActivity(intent, optionsCompat.toBundle())
             }
         }
     }
@@ -70,14 +70,17 @@ class MainAdapter : PagingDataAdapter<StoryEntity,MainAdapter.ViewHolder>(DataDi
         }
     }
 
-    object DataDifferentiator : DiffUtil.ItemCallback<StoryEntity>() {
+    companion object {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<StoryEntity>() {
 
-        override fun areItemsTheSame(oldItem: StoryEntity, newItem: StoryEntity): Boolean {
-            return oldItem.id == newItem.id
-        }
+            override fun areItemsTheSame(oldItem: StoryEntity, newItem: StoryEntity): Boolean {
+                return oldItem.id == newItem.id
+            }
 
-        override fun areContentsTheSame(oldItem: StoryEntity, newItem: StoryEntity): Boolean {
-            return oldItem == newItem
+            override fun areContentsTheSame(oldItem: StoryEntity, newItem: StoryEntity): Boolean {
+                return oldItem == newItem
+            }
         }
     }
+
 }

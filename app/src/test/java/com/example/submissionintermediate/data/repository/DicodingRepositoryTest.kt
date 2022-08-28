@@ -2,11 +2,14 @@ package com.example.submissionintermediate.data.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.submissionintermediate.data.local.LocalDataSource
+import com.example.submissionintermediate.data.local.PagingSourceUtils
 import com.example.submissionintermediate.data.preferences.UserPreference
 import com.example.submissionintermediate.data.remote.ApiServiceJson
 import com.example.submissionintermediate.data.remote.RemoteDataSource
 import com.example.submissionintermediate.data.remote.network.ApiResponse
 import com.example.submissionintermediate.model.User
+import com.example.submissionintermediate.utils.DataDummy
+import com.example.submissionintermediate.utils.DataMapper
 import com.example.submissionintermediate.utils.MainDispatcherRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
@@ -232,5 +235,57 @@ class DicodingRepositoryTest {
         verify(userPreference).getUser()
 
         Assert.assertEquals(user, actual)
+    }
+
+    @Test
+    fun `get all stories from local success`() = runTest {
+        val storiesResponse = ApiServiceJson().getAllStoriesResponse()
+        val storyEntities = DataMapper.mapStoryItemToStoryEntity(storiesResponse.listStory)
+
+        `when`(localDataSource.getAllStories()).thenReturn(flowOf(storyEntities))
+
+        val actual = repository.getAllStoriesFromLocal().first()
+
+        verify(localDataSource).getAllStories()
+
+        Assert.assertNotNull(actual)
+        Assert.assertEquals(storyEntities, actual)
+    }
+
+    @Test
+    fun `get stories success`() = runTest {
+        val token = "123"
+        val storiesResponse = ApiServiceJson().getAllStoriesResponse()
+
+        `when`(userPreference.getToken()).thenReturn(flowOf(token))
+        `when`(
+            remoteDataSource.getAllStories(
+                "Bearer $token",
+                1,
+                5
+            )
+        ).thenReturn(flowOf(ApiResponse.Success(storiesResponse)))
+
+        val actual = repository.getStories().first()
+
+        val inOrder = inOrder(userPreference, remoteDataSource)
+        inOrder.verify(userPreference).getToken()
+        inOrder.verify(remoteDataSource).getAllStories(
+            "Bearer $token",
+            1,
+            5
+        )
+        Assert.assertNotNull(actual)
+        Assert.assertEquals(ApiResponse.Success(storiesResponse), actual)
+    }
+
+    @Test
+    fun `get story paging source success`() = runTest {
+        val stories = DataDummy.generateDummyStoriesEntity()
+        `when`(localDataSource.getPagingStories()).thenReturn(PagingSourceUtils(stories))
+
+        val actual = repository.getPagingStories().first()
+
+        Assert.assertNotNull(actual)
     }
 }
